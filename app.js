@@ -10,13 +10,26 @@ function coinInputId(id){
     return newCoin;
 }
 
+
+
 document.getElementById('d-btn-n').addEventListener('click',function(){
+    
      let coin = coinId('n-coin')
      let inputCoin = coinInputId('n-v-coin')
      let modalCoin = coinId('n-modal-coin')
      let mainCoin = coinId('main-nav-coin')
-     let navSum = mainCoin - inputCoin
+     
+     if(isNaN(inputCoin)){
+        alert('Something is Wrong')
+        return;
+    } else if(inputCoin < 0 || mainCoin < inputCoin){
+          alert("give a valid number")
+          return;
+    } else{
+        let navSum = mainCoin - inputCoin
      let nSum = coin + inputCoin
+
+    
 
 
      document.getElementById('n-modal-coin').innerText = inputCoin
@@ -28,9 +41,10 @@ document.getElementById('d-btn-n').addEventListener('click',function(){
      <br><p class="text-center">Date: ${new Date(8.64e15).toString()}</p>
      </div>
      `
-     document.getElementById('history').parentElement.appendChild(p)
+     document.getElementById('history').appendChild(p)
       
-    //  console.log(typeof mainCoin,mainCoin);
+    
+    }
      
 
     
@@ -41,6 +55,15 @@ document.getElementById('fani-btn').addEventListener('click',function(){
     let modalCoin = coinId('fani-m-coin')
     let inputCoin = coinInputId('fani-input-coin')
     let mainCoin = coinId('main-nav-coin')
+
+    if(isNaN(inputCoin)){
+        alert('Something is Wrong')
+        return;
+    }
+    else if(inputCoin < 0 || mainCoin < inputCoin){
+        alert("give a valid number")
+        return;
+    } else{
     let navSum = mainCoin - inputCoin
      let fSum = faniCoin + inputCoin
     
@@ -54,10 +77,10 @@ document.getElementById('fani-btn').addEventListener('click',function(){
      <br><p class="text-center">Date: ${new Date(8.64e15).toString()}</p>
      </div>
      `
-     document.getElementById('history').parentElement.appendChild(p)
+     document.getElementById('history').appendChild(p)
      
 
-    
+    }
     
 
     
@@ -68,6 +91,14 @@ document.getElementById('quota-btn').addEventListener('click',function(){
     let quotaCoin = coinId('quota-coin')
     let inputCoin = coinInputId('quota-input-coin')
     let mainCoin = coinId('main-nav-coin')
+    if(isNaN(inputCoin)){
+        alert('Something is Wrong')
+        return;
+    }
+    else if(inputCoin < 0 || mainCoin < inputCoin){
+        alert("give a valid number")
+        return;
+    } else{
     let navSum = mainCoin - inputCoin
      let qSum = quotaCoin + inputCoin
 
@@ -80,9 +111,9 @@ document.getElementById('quota-btn').addEventListener('click',function(){
      <br><p class="text-center">Date: ${new Date(8.64e15).toString()}</p>
      </div>
      `
-     document.getElementById('history').parentElement.appendChild(p)
+     document.getElementById('history').appendChild(p)
 
-    
+    }
 })
 
 let historyBtn = document.getElementById('history-btn');
@@ -93,6 +124,7 @@ historyBtn.addEventListener('click',function(){
    mainDiv.classList.add('hidden')
    donationBtn.classList.remove('bg-[#B4F461]')
    historyBtn.classList.add('bg-[#B4F461]')
+   document.getElementById('history').classList.remove('hidden')
      
     
 })
@@ -100,6 +132,8 @@ donationBtn.addEventListener('click',function(){
     mainDiv.classList.remove('hidden')
     donationBtn.classList.add('bg-[#B4F461]')
    historyBtn.classList.remove('bg-[#B4F461]')
+   document.getElementById('history').classList.add('hidden')
+
     
 })
 
