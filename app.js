@@ -102,3 +102,7 @@ donationBtn.addEventListener('click',function(){
    historyBtn.classList.remove('bg-[#B4F461]')
     
 })
+
+document.getElementById('blog-btn').addEventListener('click',function(){
+    window.location.href = "fqn.html"
+})

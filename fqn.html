@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+    <div>
+        <div class="navbar bg-base-100 p-3 sticky">
+            <div class="navbar-start">
+              <div class="dropdown">
+                <div tabindex="0" role="button" class="btn btn-ghost btn-circle">
+                  <button id="home-btn" class="bg-[#B4F461] btn">Home</button>
+                </div>
+               
+              </div>
+            </div>
+            <div class="navbar-center">
+                <div class="ml-8"><img src="B10A5-DOM-Quest-Build-and-Manipulate-main/assets/logo.png" alt=""></div>
+              <a class="btn btn-ghost mr-14 lg:text-xl">Donate Bangladesh</a>
+            </div>
+            <div class="navbar-end">
+             <div>
+                <img src="B10A5-DOM-Quest-Build-and-Manipulate-main/assets/coin.png" alt="">
+             </div>
+             <div class="text-[#rgba(17, 17, 17, 0.7)] flex ml-3 mr-3 font-medium">
+                <p id="main-nav-coin" class="mr-3">6000</p>
+                <p>BDT</p>
+             </div>
+              
+            </div>
+          </div>
+          <div class="flex justify-center gap-3 mt-5">
+            <button id="donation-btn" class="btn bg-[#B4F461]">Donation</button>
+          <button id="history-btn" class="btn">History</button>
+          </div>
+    </div>
+    <div class="mt-20">
+
+    <div class="collapse collapse-arrow bg-base-200">
+        <input type="radio" name="my-accordion-2" checked="checked" />
+        <div class="collapse-title text-xl font-medium">What is the Document Object Model (DOM)?</div>
+        <div class="collapse-content">
+          <p>The Document Object Model is a programming interface for web documents. It represents the structure of a webpage as a tree of objects, allowing programs and scripts to dynamically access, modify, and manipulate the content, structure, and style of the document.</p>
+        </div>
+      </div>
+
+      <div class="collapse collapse-arrow bg-base-200">
+        <input type="radio" name="my-accordion-2" />
+        <div class="collapse-title text-xl font-medium">How do you select an element from the DOM?</div>
+        <div class="collapse-content">
+          <p>I select the dom using getElementById, querySelector and querySelectorall</p>
+        </div>
+      </div>
+
+      <div class="collapse collapse-arrow bg-base-200">
+        <input type="radio" name="my-accordion-2" />
+        <div class="collapse-title text-xl font-medium">What is event delegation in the context of the DOM, and why is it useful?</div>
+        <div class="collapse-content">
+          <p>Event delegation is a technique in JavaScript that allows you to manage events efficiently by taking advantage of the way events propagate through the DOM. Instead of adding event listeners to multiple child elements, you add a single event listener to a parent element. This listener can then respond to events that occur on any of its children.</p>
+        </div>
+      </div>
+
+      <div class="collapse collapse-arrow bg-base-200">
+        <input type="radio" name="my-accordion-2" />
+        <div class="collapse-title text-xl font-medium">How do you manipulate an element's attributes and styles using the DOM?</div>
+        <div class="collapse-content">
+          <p>I am using getAttribute, setAttribute, removeAttribute, style.backgroundColor these to manipulate the dom</p>
+        </div>
+      </div>
+
+    </div>
+    <script src="fqn.js"></script>
+</body>
+</html>
